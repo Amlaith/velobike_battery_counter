@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image, ImageEnhance
 from scipy.spatial.distance import cdist
 import re
-pytesseract.pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract.exe"
+# pytesseract.pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract.exe"
 
 
 def remove_green(image):
