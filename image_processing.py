@@ -6,6 +6,8 @@ from scipy.spatial.distance import cdist
 import re
 # pytesseract.pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract.exe"
 
+pytesseract.pytesseract.tesseract_cmd = None
+
 
 def remove_green(image):
     green = np.array([(86, 179, 99)])
