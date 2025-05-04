@@ -1,4 +1,5 @@
 import os
+import shutil
 import pytesseract
 import numpy as np
 from PIL import Image, ImageEnhance
@@ -7,6 +8,12 @@ import re
 # pytesseract.pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract.exe"
 
 pytesseract.pytesseract.tesseract_cmd = None
+# search for tesseract binary in path
+def find_tesseract_binary() -> str:
+    return shutil.which("tesseract")
+
+# set tesseract binary path
+pytesseract.pytesseract.tesseract_cmd = find_tesseract_binary()
 
 
 def remove_green(image):
